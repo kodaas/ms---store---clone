@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "Segoe UI";
+    src: url("./fonts/Segoe_UI.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Segoe UI";
+    src: url("./fonts/Segoe_UI_Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: "Segoe UI";
+    src: url("./fonts/Segoe_UI_Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Segoe UI";
+    src: url("./fonts/Segoe_UI_Bold_Italic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  * {
+    @apply font-primary;
+  }
+
+  @layer base {
+    :root {
+      --background: 0, 0%, 95%;
+      --background-50: 0, 0%, 98%;
+      --background-100: 0, 0%, 100%;
+      --background-200: 0, 0%, 98%;
+      --background-dark: 0, 0%, 100%;
+      --foreground-display: 0, 0%, 13%;
+      --foreground-body: 0, 0%, 25%;
+    }
+
+    .dark {
+      --background: 0, 0%, 13%;
+      --background-50: 0, 0%, 23%;
+      --background-100: 0, 0%, 20%;
+      --background-200: 0, 0%, 15%;
+      --background-dark: 0, 0%, 5%;
+      --foreground-display: 0, 0%, 98%;
+      --foreground-body: 0, 0%, 78%;
+    }
+
+    [data-color-mode='orange'] {
+      --primary: 25, 95%, 53%;
+      --primary-hover: 21, 90%, 48%;
+      --primary-dark: 17, 88%, 40%;
+      --primary-light: 32, 98%, 83%;
+    }
+
+    [data-color-mode='teal'] {
+      --primary: 173, 80%, 40%;
+      --primary-hover: 175, 84%, 32%;
+      --primary-dark: 175, 77%, 26%;
+      --primary-light: 168, 84%, 78%;
+    }
+
+    [data-color-mode='indigo'] {
+      --primary: 239, 84%, 67%;
+      --primary-hover: 243, 75%, 59%;
+      --primary-dark: 245, 58%, 51%;
+      --primary-light: 228, 96%, 89%;
+    }
+
+    [data-color-mode='pink'] {
+      --primary: 330, 81%, 60%;
+      --primary-hover: 333, 71%, 51%;
+      --primary-dark: 335, 78%, 42%;
+      --primary-light: 326, 85%, 90%;
+    }
+  }
