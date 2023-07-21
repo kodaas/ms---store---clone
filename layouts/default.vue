@@ -3,21 +3,28 @@
     <Head>
       <Title>{{ useTitle().value }}</Title>
     </Head>
+
     <Body class="bg-background text-foreground-body">
-      <Nav />
+      <section class="max-w-screen max-h-screen flex flex-col">
+        <div class="border border-orange-300">
+          <Nav />
+        </div>
 
-      <section class="flex">
-        <section
-          class="overflow-hidden shrink-0 w-20 h-[calc(100vh-4.5rem)] sticky top-[4.5rem]"
-        >
-          <Sidebar />
+        <section class="border-2 border-red-300 overflow-hidden h-full flex">
+          <section class="w-20 border-2 border-green-300">
+            <Sidebar />
+          </section>
+
+          <main
+            class="overflow-y-auto overflow-x-hidden w-full border-2 border-blue-200 scrollbar-thin scrollbar-thumb-primary dark:scrollbar-thumb-primary-light scrollbar-track-background scrollbar-thumb-rounded-lg"
+          >
+            <slot />
+
+            <div class="w-full h-screen bg-black"></div>
+            <div class="w-full h-screen bg-green-300"></div>
+            <div class="w-full h-screen bg-blue-400"></div>
+          </main>
         </section>
-
-        <main
-          class="p-20 overflow-x-hidden bg-background-200 h-[calc(100vh-4.5rem)] rounded-tl-md w-full scrollbar-thin scrollbar-thumb-primary dark:scrollbar-thumb-primary-light scrollbar-track-background scrollbar-thumb-rounded-lg isolate"
-        >
-          <slot />
-        </main>
       </section>
     </Body>
   </Html>
