@@ -1,3 +1,4 @@
+// App Title
 export const useTitle = () =>
   useState("app-title", () => "Microsoft Store Clone");
 
