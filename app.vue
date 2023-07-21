@@ -1,5 +1,6 @@
 <template>
   <NuxtLayout>
-    <SplashLoader />
+    <NuxtPage />
   </NuxtLayout>
+  <!-- <SplashLoader /> -->
 </template>
