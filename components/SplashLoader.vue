@@ -1,5 +1,5 @@
 <template>
-  <Title>{{ useTitle().value }} - Loading...</Title>
+  <Title> Loading... | {{ useTitle().value }}</Title>
 
   <main class="h-screen flex items-end justify-center">
     <section class="h-[calc(50%+3rem)] space-y-48 text-center">
