@@ -84,3 +84,12 @@
       --primary-light: 326, 85%, 90%;
     }
   }
+
+  @layer utilities {
+    .clamp-text {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
