@@ -1,14 +1,14 @@
 <template>
   <nav
-    class="bg-background flex justify-between items-center gap-x-3 py-2 px-2 w-full"
+    class="bg-background flex justify-between items-center gap-x-3 py-2 px-5 w-full"
   >
     <section>
       <div class="flex items-center gap-x-3">
-        <Button class="hidden" intent="ghost" size="sm"
+        <Button customClass="hidden" intent="ghost" size="sm"
           ><Icon class="w-5 h-5" name="ic:round-keyboard-arrow-left"
         /></Button>
 
-        <Button href="/home" intent="ghost" class="flex items-center gap-x-3">
+        <Button href="/home" intent="ghost" customClass="flex items-center gap-x-3">
           <Logo size="w-5 h-5" />
 
           <p class="text-foreground-display text-sm hidden md:block">
