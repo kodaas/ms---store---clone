@@ -37,21 +37,21 @@
 
   @layer base {
     :root {
-      --background: 0, 0%, 95%;
-      --background-50: 0, 0%, 98%;
-      --background-100: 0, 0%, 100%;
-      --background-200: 0, 0%, 98%;
-      --background-dark: 0, 0%, 100%;
+      --background: 0, 0%, 85%;
+      --background-50: 0, 0%, 85%;
+      --background-100: 0, 0%, 90%;
+      --background-200: 0, 0%, 95%;
+      --background-500: 0, 0%, 100%;
       --foreground-display: 0, 0%, 13%;
       --foreground-body: 0, 0%, 25%;
     }
 
     .dark {
-      --background: 0, 0%, 13%;
-      --background-50: 0, 0%, 23%;
-      --background-100: 0, 0%, 20%;
-      --background-200: 0, 0%, 15%;
-      --background-dark: 0, 0%, 5%;
+      --background-50:  0, 0%, 30%;
+      --background-100: 0, 0%, 25%;
+      --background-200: 0, 0%, 20%;
+      --background:     0, 0%, 15%;
+      --background-500: 0, 0%, 10%;
       --foreground-display: 0, 0%, 98%;
       --foreground-body: 0, 0%, 78%;
     }
