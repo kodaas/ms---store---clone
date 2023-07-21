@@ -1,28 +1,25 @@
 <template>
-  <Html data-color-mode="teal" :class="useThemeMode().value" lang="en">
+  <Html data-color-mode="orange" :class="useThemeMode().value" lang="en">
     <Head>
       <Title>{{ useTitle().value }}</Title>
     </Head>
 
     <Body class="bg-background text-foreground-body">
+      <div class="p-32"></div>
       <section class="max-w-screen max-h-screen flex flex-col">
-        <div class="border border-orange-300">
+        <div>
           <Nav />
         </div>
 
-        <section class="border-2 border-red-300 overflow-hidden h-full flex">
-          <section class="w-20 border-2 border-green-300">
+        <section class="overflow-hidden h-full flex">
+          <section class="w-20">
             <Sidebar />
           </section>
 
           <main
-            class="overflow-y-auto overflow-x-hidden w-full border-2 border-blue-200 scrollbar-thin scrollbar-thumb-primary dark:scrollbar-thumb-primary-light scrollbar-track-background scrollbar-thumb-rounded-lg"
+            class="overflow-y-auto overflow-x-hidden min-h-screen w-full bg-background-200 rounded-tl-md scrollbar-thin scrollbar-thumb-primary dark:scrollbar-thumb-primary-light scrollbar-track-background scrollbar-thumb-rounded-lg"
           >
             <slot />
-
-            <div class="w-full h-screen bg-black"></div>
-            <div class="w-full h-screen bg-green-300"></div>
-            <div class="w-full h-screen bg-blue-400"></div>
           </main>
         </section>
       </section>
