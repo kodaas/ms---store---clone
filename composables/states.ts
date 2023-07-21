@@ -15,3 +15,19 @@ export const useToggleTheme = () => {
     themeMode.value = "light";
   }
 };
+
+// Search Input
+export const useSearchInput = () => useState("search-input", () => "");
+
+export const useSearchInputElement = () =>
+  useState<HTMLInputElement | null>("search-input-element", () => null);
+
+export const clearSearchInput = ({
+  focusSearch = false,
+}: {
+  focusSearch?: boolean;
+}) => {
+  useSearchInput().value = "";
+
+  if (focusSearch) useSearchInputElement().value?.focus();
+};
