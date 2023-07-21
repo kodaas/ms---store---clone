@@ -1,22 +1,7 @@
-<script setup lang="ts">
-const updateThemeMode = (mode: string) => {
-  const themeMode = useThemeMode();
-
-  switch (mode) {
-    case "light":
-      themeMode.value = "light";
-      break;
-    case "dark":
-      themeMode.value = "dark";
-      break;
-    default:
-      themeMode.value = "light";
-  }
-};
-</script>
-
 <template>
-  <nav class="bg-background flex justify-between items-center py-2 px-2 w-full">
+  <nav
+    class="bg-background flex justify-between items-center gap-x-3 py-2 px-2 w-full"
+  >
     <section>
       <div class="flex items-center gap-x-3">
         <Button class="hidden" intent="ghost" size="sm"
@@ -38,23 +23,9 @@ const updateThemeMode = (mode: string) => {
     </section>
 
     <section class="flex gap-x-5">
-      <Button intent="ghost" size="sm">
-        <Icon
-          @click="updateThemeMode('dark')"
-          v-if="useThemeMode().value === 'light'"
-          class="w-4 h-4"
-          name="ph:sun-duotone"
-        />
+      <NavTheme />
 
-        <Icon
-          @click="updateThemeMode('light')"
-          v-if="useThemeMode().value === 'dark'"
-          class="w-4 h-4"
-          name="ri:moon-clear-line"
-        />
-      </Button>
-
-      <span class="bg-yellow-500 w-8 h-8 rounded-full block"></span>
+      <NavProfile />
     </section>
   </nav>
 </template>
