@@ -3,7 +3,7 @@ export const useTitle = () =>
   useState("app-title", () => "Microsoft Store Clone");
 
 // Light And Dark Theme
-export const useThemeMode = () => useState("theme-mode", () => "dark");
+export const useThemeMode = () => useState("theme-mode", () => "system");
 
 export const useToggleTheme = () => {
   const themeMode = useThemeMode();
@@ -11,7 +11,7 @@ export const useToggleTheme = () => {
   if (themeMode.value === "light") {
     themeMode.value = "dark";
   } else if (themeMode.value === "dark") {
-    themeMode.value = `system ${usePreferredDark().value ? "dark" : "light"}`;
+    themeMode.value = "system";
   } else if (themeMode.value.includes("system")) {
     themeMode.value = "light";
   }

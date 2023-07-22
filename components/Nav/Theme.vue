@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import { usePreferredColorScheme, useThemeMode, useToggleTheme  } from '#imports'
+
+watchEffect(() => {
+  if (useThemeMode().value.includes('system')) {
+    useThemeMode().value = `system ${usePreferredColorScheme().value}`
+  }
+})
+</script>
+
 <template>
   <Button @click="useToggleTheme()" intent="ghost" size="sm">
     <Icon
