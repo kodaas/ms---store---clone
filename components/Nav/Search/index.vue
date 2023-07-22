@@ -2,14 +2,20 @@
 const form = ref<HTMLInputElement>();
 const showDropdown = ref(false);
 const searchInput = useSearchInput();
+const router = useRouter()
 const inputElement: unknown = useSearchInputElement();
 
-const onFocus = () => {
+function onFocus(e: Event) {
+  e.stopPropagation();
   showDropdown.value = true;
   onClickOutside(form, () => (showDropdown.value = false));
-};
+}
 
-const handleSearch = () => {};
+function handleSearch() {
+  router.push(`/search-result?q=${searchInput.value}`)
+  clearSearchInput({});
+  showDropdown.value = false;
+}
 
 onMounted(() => {
   //@ts-ignore
@@ -18,7 +24,7 @@ onMounted(() => {
 </script>
 <template>
   <form
-    class="w-full isolate relative flex"
+    class="w-full relative flex"
     @submit.prevent="handleSearch"
     @click="onFocus"
   >
@@ -36,6 +42,7 @@ onMounted(() => {
       intent="ghost"
       size="sm"
       v-show="searchInput"
+      type="button"
       customClass="absolute right-9 top-[.4rem] py-1 px-1 cursor-pointer"
       @click="clearSearchInput({ focusSearch: true })"
     >
@@ -53,9 +60,9 @@ onMounted(() => {
       v-show="showDropdown"
       class="absolute mt-10 w-full rounded-md border border-background-50 bg-background-100 z-50 p-2"
     >
-      <NavSearchHistory />
+      <LazyNavSearchHistory v-if="!searchInput" />
 
-      <NavSearchRecommendation />
+      <LazyNavSearchRecommendation v-else />
     </div>
   </form>
 </template>

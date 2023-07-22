@@ -5,8 +5,8 @@
     </Head>
 
     <Body class="bg-background text-foreground-body">
-      <div class="p-32"></div>
-      <section class="max-w-screen max-h-screen flex flex-col">
+      <!-- <div class="p-32"></div> -->
+      <section class="w-screen max-w-[2500px] mx-auto max-h-screen flex flex-col">
         <div>
           <Nav />
         </div>
@@ -17,7 +17,7 @@
           </section>
 
           <main
-            class="overflow-y-auto overflow-x-hidden min-h-screen w-full bg-background-200 rounded-tl-md scrollbar-thin scrollbar-thumb-primary dark:scrollbar-thumb-primary-light scrollbar-track-background scrollbar-thumb-rounded-lg"
+            class="overflow-y-auto z-10 overflow-x-hidden min-h-screen mx-auto w-full  bg-background-200 rounded-tl-md scrollbar-thin scrollbar-thumb-primary dark:scrollbar-thumb-primary-light scrollbar-track-background scrollbar-thumb-rounded-lg"
           >
             <slot />
           </main>

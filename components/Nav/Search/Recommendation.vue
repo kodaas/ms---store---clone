@@ -1,3 +1,14 @@
+<script setup lang="ts">
+const removeHistoryItem = (e: Event) => {};
+
+onMounted(() => {
+  const { pending, data } = useFetch("/api/search/history", {
+    lazy: true,
+    server: false,
+  });
+});
+</script>
+
 <template>
   <div>
     <NavSearchDropdownItem intent="result">
