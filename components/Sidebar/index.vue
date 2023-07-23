@@ -25,7 +25,7 @@ function isRouteActive(route: string) {
 
 
 
-      <SidebarItem :is-selected="isRouteActive('/app')" route="/app">
+      <SidebarItem :is-selected="isRouteActive('/applications')" route="/applications">
         <template #icon="{ isSelected }">
           <div class="text-2xl">
             <Icon class="text-primary dark:text-primary-light" v-if="isSelected" name="uis:apps" />
@@ -34,7 +34,7 @@ function isRouteActive(route: string) {
         </template>
 
         <template #default="{ isSelected }">
-          <span v-if="!isSelected" class="text-xs">Home</span>
+          <span v-if="!isSelected" class="text-xs">Apps</span>
         </template>
       </SidebarItem>
 
@@ -50,7 +50,7 @@ function isRouteActive(route: string) {
         </template>
 
         <template #default="{ isSelected }">
-          <span v-if="!isSelected" class="text-xs">Home</span>
+          <span v-if="!isSelected" class="text-xs">Gaming</span>
         </template>
       </SidebarItem>
 
@@ -65,7 +65,7 @@ function isRouteActive(route: string) {
         </template>
 
         <template #default="{ isSelected }">
-          <span v-if="!isSelected" class="text-xs">Home</span>
+          <span v-if="!isSelected" class="text-xs">Movies</span>
         </template>
       </SidebarItem>
 
@@ -84,7 +84,7 @@ function isRouteActive(route: string) {
         </template>
 
         <template #default="{ isSelected }">
-          <span v-if="!isSelected" class="text-xs">Home</span>
+          <span v-if="!isSelected" class="text-xs">Library</span>
           <span class="absolute right-2 top-2 w-1.5 h-1.5 rounded-full bg-primary dark:bg-primary-light"></span>
         </template>
       </SidebarItem>
@@ -100,7 +100,7 @@ function isRouteActive(route: string) {
         </template>
 
         <template #default="{ isSelected }">
-          <span v-if="!isSelected" class="text-xs">Home</span>
+          <span v-if="!isSelected" class="text-xs">About</span>
         </template>
       </SidebarItem>
     </section>
