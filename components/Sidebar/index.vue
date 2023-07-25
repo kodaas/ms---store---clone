@@ -12,7 +12,7 @@ function isRouteActive(route: string) {
 
       <SidebarItem :is-selected="isRouteActive('/')" route="/">
         <template #icon="{ isSelected }">
-          <div class="text-2xl">
+          <div class="text-2xl group-active:scale-90 transition-all duration-500">
             <Icon class="text-primary dark:text-primary-light" v-if="isSelected" name="ph:house-fill" />
             <Icon v-else name="ph:house-light" />
           </div>
@@ -27,7 +27,7 @@ function isRouteActive(route: string) {
 
       <SidebarItem :is-selected="isRouteActive('/applications')" route="/applications">
         <template #icon="{ isSelected }">
-          <div class="text-2xl">
+          <div class="text-2xl group-active:scale-90 transition-all duration-500">
             <Icon class="text-primary dark:text-primary-light" v-if="isSelected" name="uis:apps" />
             <Icon v-else name="fluent:apps-16-regular" />
           </div>
@@ -42,7 +42,7 @@ function isRouteActive(route: string) {
 
       <SidebarItem :is-selected="isRouteActive('/gaming')" route="/gaming">
         <template #icon="{ isSelected }">
-          <div class="text-2xl">
+          <div class="text-2xl group-active:scale-90 transition-all duration-500">
             <Icon class="text-primary dark:text-primary-light" v-if="isSelected"
               name="fluent:xbox-controller-20-filled" />
             <Icon v-else name="fluent:xbox-controller-16-regular" />
@@ -58,7 +58,7 @@ function isRouteActive(route: string) {
 
       <SidebarItem :is-selected="isRouteActive('/movies-tv')" route="/movies-tv">
         <template #icon="{ isSelected }">
-          <div class="text-2xl">
+          <div class="text-2xl group-active:scale-90 transition-all duration-500">
             <Icon class="text-primary dark:text-primary-light" v-if="isSelected" name="fluent:movies-and-tv-20-filled" />
             <Icon v-else name="fluent:movies-and-tv-16-regular" />
           </div>
@@ -77,7 +77,7 @@ function isRouteActive(route: string) {
     <section class="flex flex-col items-center gap-y-2 py-3">
       <SidebarItem :is-selected="isRouteActive('/library')" route="/library">
         <template #icon="{ isSelected }">
-          <div class="text-2xl">
+          <div class="text-2xl group-active:scale-90 transition-all duration-500">
             <Icon class="text-primary dark:text-primary-light" v-if="isSelected" name="fluent:library-16-filled" />
             <Icon v-else name="fluent:library-16-regular" />
           </div>
@@ -93,7 +93,7 @@ function isRouteActive(route: string) {
 
       <SidebarItem :is-selected="isRouteActive('/about')" route="/about">
         <template #icon="{ isSelected }">
-          <div class="text-2xl">
+          <div class="text-2xl group-active:scale-90 transition-all duration-500">
             <Icon class="text-primary dark:text-primary-light" v-if="isSelected" name="ph:question-fill" />
             <Icon v-else name="ph:question" />
           </div>

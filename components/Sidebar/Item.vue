@@ -14,7 +14,7 @@ defineSlots<{
 
 <template>
   <Button :href="props.route" intent="ghost" size="sm"
-    :custom-class="props.isSelected ? 'bg-background-100 w-full pb-4 relative flex-col' : 'relative flex-col w-full p-1'">
+    :custom-class="props.isSelected ? 'bg-background-100 w-full pb-4 relative flex-col transition duration-300' : 'group transition duration-300 relative flex-col w-full p-1'">
     <slot :isSelected="props.isSelected" name="icon" />
     <slot :isSelected="props.isSelected" />
 
